@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi nội dung của nhiều phần tử</title>
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <button onclick="updateParagraphs()">Update Paragraphs</button>
+
+    <script>
+        function updateParagraphs() {
+            // Bước 1: Lấy tất cả các phần tử <p>
+            var paragraphs = document.querySelectorAll("p");
+
+            // Bước 2: Duyệt qua từng phần tử và thay đổi nội dung
+            paragraphs.forEach(function(p) {
+                p.innerHTML = "Updated paragraph";
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo một bảng động</title>
+</head>
+<body>
+    <div id="table-container"></div>
+    
+    <script>
+        // Hàm để tạo bảng và thêm vào phần tử với id "table-container"
+        function createTable() {
+            // Bước 1: Tạo phần tử bảng
+            var table = document.createElement("table");
+            
+            // Bước 2: Tạo bảng có 3 hàng và 3 cột
+            for (var i = 0; i < 3; i++) {
+                var tr = document.createElement("tr"); // Tạo hàng
+                
+                for (var j = 0; j < 3; j++) {
+                    var td = document.createElement("td"); // Tạo ô
+                    td.textContent = `Row ${i+1}, Cell ${j+1}`; // Thay đổi nội dung của ô
+                    tr.appendChild(td); // Thêm ô vào hàng
+                }
+                
+                table.appendChild(tr); // Thêm hàng vào bảng
+            }
+            
+            // Bước 3: Thêm bảng vào phần tử có id "table-container"
+            var container = document.getElementById("table-container");
+            container.appendChild(table);
+        }
+        
+        // Gọi hàm để tạo bảng khi trang được tải
+        createTable();
+    </script>
+</body>
+</html>

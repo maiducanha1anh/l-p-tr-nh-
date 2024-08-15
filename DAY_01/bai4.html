@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="abc">
+        <p id="remove-me">Phần tử 1</p>
+        <p>Phần tử 2</p>
+    </div> 
+    
+
+    <script>
+// lấy tham chiếu đến phần tử cần xóa
+        var abc = document.getElementById("remove-me");
+// lấy tham chiếu đến phần tử mẹ
+        var bcd = abc.parentElement;
+// xóa phần tử abc trong phần DOM
+        bcd.removeChild(abc);
+
+
+
+
+
+    </script>
+</body>
+</html>

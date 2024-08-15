@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số lượng phần tử trong DOM</title>
+</head>
+<body>
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <div>Div 4</div>
+    <button onclick="countDivs()">Count Divs</button>
+    <p id="result"></p>
+
+    <script>
+        function countDivs() {
+            // Bước 1: Lấy tất cả các phần tử <div>
+            var divs = document.querySelectorAll("div");
+            
+            // Bước 2: Đếm số lượng phần tử <div>
+            var count = divs.length;
+            
+            // Bước 3: Hiển thị kết quả
+            // Có thể sử dụng alert để hiển thị thông báo
+            alert("Số lượng phần tử <div> là: " + count);
+
+            // Hoặc thay đổi nội dung của một phần tử HTML để hiển thị kết quả
+            document.getElementById("result").textContent = "Số lượng phần tử <div> là: " + count;
+        }
+    </script>
+</body>
+</html>

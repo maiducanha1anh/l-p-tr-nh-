@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi nội dung bằng cách thao tác với Class</title>
+</head>
+<body>
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+    <p class="item">Item 3</p>
+    <button onclick="updateItems()">Update Items</button>
+
+    <script>
+        function updateItems() {
+            // Bước 1: Lấy tất cả các phần tử có class "item"
+            var items = document.querySelectorAll(".item");
+
+            // Bước 2: Duyệt qua từng phần tử và thay đổi nội dung
+            items.forEach(function(item) {
+                item.innerHTML = "Updated item";
+            });
+        }
+    </script>
+</body>
+</html>

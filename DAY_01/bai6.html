@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xử lý sự kiện click</title>
+</head>
+<body>
+    <button id="btn">Nhấp vào tôi!</button>
+
+    <script>
+        // Bước 1: Lấy tham chiếu đến phần tử button có id là "btn"
+        var button = document.getElementById("btn");
+
+        // Bước 2: Thêm trình xử lý sự kiện click
+        button.addEventListener("click", function() {
+            // Bước 3: Hiển thị thông báo
+            alert("Bạn đã nhấp vào nút!");
+        });
+    </script>
+</body>
+</html>
