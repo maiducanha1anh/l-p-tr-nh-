@@ -1,15 +1,19 @@
-const express = require('express')
-const app = express()
-const port = 3001
-const todosRouter = require('./src/routers/todos');
-app.use(express.json());
+const express = require('express');
+const bodyParser = require('body-parser');
+const todoRoutes = require('./routes/todosRoutes');
+const cors = require('cors');
 
-app.get('/', (req,res) => {
-    res.send('Hello World!')
-})
-app.use('/todos', todosRouter);
+const app = express();
+const port = 3000;
+
+app.use(cors({
+  origin: 'http://localhost:3001'  
+}));
+
+app.use(bodyParser.json()); 
+
+app.use('/api', todoRoutes); 
+
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
-
-
+  console.log(`Server running at http://localhost:${port}`);
+});
